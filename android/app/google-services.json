@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1076527543072",
+    "project_id": "eval2-sis22-47450",
+    "storage_bucket": "eval2-sis22-47450.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1076527543072:android:e7e1352a4c43123a1e1d45",
+        "android_client_info": {
+          "package_name": "com.com.yir.eval2_sis22"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAbfI1nKYaF4U4aSH3lqcL-jXKxXYltcFM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1076527543072:android:6a847a1d2821c3e51e1d45",
+        "android_client_info": {
+          "package_name": "com.eval2yir.eval_sis22"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAbfI1nKYaF4U4aSH3lqcL-jXKxXYltcFM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

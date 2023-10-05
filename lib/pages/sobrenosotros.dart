@@ -18,7 +18,7 @@ class SobreNosotrosScreen extends StatelessWidget {
             ),
             SizedBox(height: 20), // Espacio vertical entre la imagen y el texto
             Text(
-              'Autores:',
+              'Autores de la app:',
               style: TextStyle(
                 fontSize:
                     24, // Ajusta el tamaño del texto según tus necesidades

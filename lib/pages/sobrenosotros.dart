@@ -28,21 +28,21 @@ class SobreNosotrosScreen extends StatelessWidget {
             SizedBox(
                 height: 10), // Espacio vertical entre el texto y los autores
             Text(
-              'Yordi Romero',
+              'Yordi Romero : Yordi.romero22@itca.edu.sv',
               style: TextStyle(
                 fontSize:
                     18, // Ajusta el tamaño del texto según tus necesidades
               ),
             ),
             Text(
-              'Rene Lopez fuentes ',
+              'Rene Lopez: rl444705@gmail.com',
               style: TextStyle(
                 fontSize:
                     18, // Ajusta el tamaño del texto según tus necesidades
               ),
             ),
             Text(
-              'Merari grande ',
+              'Merari grande: idalia.grande22@itca.edu.sv ',
               style: TextStyle(
                 fontSize:
                     18, // Ajusta el tamaño del texto según tus necesidades

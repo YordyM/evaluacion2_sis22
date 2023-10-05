@@ -28,14 +28,14 @@ class SobreNosotrosScreen extends StatelessWidget {
             SizedBox(
                 height: 10), // Espacio vertical entre el texto y los autores
             Text(
-              'Yordi Isaac Romero Martínez 1',
+              'Yordi Romero',
               style: TextStyle(
                 fontSize:
                     18, // Ajusta el tamaño del texto según tus necesidades
               ),
             ),
             Text(
-              'Autor 2',
+              'Rene Lopez',
               style: TextStyle(
                 fontSize:
                     18, // Ajusta el tamaño del texto según tus necesidades

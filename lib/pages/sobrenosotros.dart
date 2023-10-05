@@ -35,7 +35,7 @@ class SobreNosotrosScreen extends StatelessWidget {
               ),
             ),
             Text(
-              'Rene Lopez gay',
+              'Rene Lopez ',
               style: TextStyle(
                 fontSize:
                     18, // Ajusta el tamaño del texto según tus necesidades

@@ -1,3 +1,4 @@
+import 'package:eval_sis22/pages/sobrenosotros.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -36,13 +37,8 @@ class _MyHomePageState extends State<MyHomePage> {
   List<Map<String, dynamic>> dataFromFirestore = [];
   TextEditingController nombreController = TextEditingController();
   TextEditingController estadoController = TextEditingController();
-
-  @override
-  void initState() {
-    super.initState();
-    // Carga los datos de Firestore al iniciar la aplicación
-    getChat();
-  }
+  TextEditingController precioController =
+      TextEditingController(); // Agregado para el precio
 
   void getChat() async {
     CollectionReference collectionReference =
@@ -72,14 +68,17 @@ class _MyHomePageState extends State<MyHomePage> {
 
       String nombre = nombreController.text;
       String estado = estadoController.text;
+      String precio = precioController.text; // Obtener el precio
 
       await collectionReference.add({
         'nombre': nombre,
         'estado': estado,
+        'precio': precio, // Agregar el precio al documento Firestore
       });
 
       nombreController.clear();
       estadoController.clear();
+      precioController.clear(); // Limpiar el campo de precio
 
       getChat(); // Actualiza la lista de datos desde Firestore
     } catch (e) {
@@ -97,12 +96,6 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Center(
         child: Column(
           children: [
-            ElevatedButton(
-              onPressed: () {
-                getChat();
-              },
-              child: Text("Obtener Datos de Firestore"),
-            ),
             Padding(
               padding: EdgeInsets.all(16.0),
               child: Column(
@@ -115,11 +108,22 @@ class _MyHomePageState extends State<MyHomePage> {
                     controller: estadoController,
                     decoration: InputDecoration(labelText: "Estado"),
                   ),
+                  TextFormField(
+                    controller: precioController,
+                    decoration:
+                        InputDecoration(labelText: "Precio"), // Campo de precio
+                  ),
                   ElevatedButton(
                     onPressed: () {
                       agregarProducto();
                     },
                     child: Text("Agregar Producto"),
+                  ),
+                  ElevatedButton(
+                    onPressed: () {
+                      getChat();
+                    },
+                    child: Text("Obtener Datos de Firestore"),
                   ),
                 ],
               ),
@@ -133,9 +137,21 @@ class _MyHomePageState extends State<MyHomePage> {
                         Text("Nombre: ${dataFromFirestore[index]['nombre']}"),
                     subtitle:
                         Text("Estado: ${dataFromFirestore[index]['estado']}"),
+                    trailing: Text(
+                        "Precio: ${dataFromFirestore[index]['precio']}"), // Mostrar el precio
                   );
                 },
               ),
+            ),
+            ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => SobreNosotrosScreen()),
+                );
+              },
+              child: Text('Ir a Sobre nosotros'),
             ),
           ],
         ),

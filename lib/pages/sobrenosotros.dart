@@ -5,7 +5,7 @@ class SobreNosotrosScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Pagina Sobre nosotros'),
+        title: Text('Sobre nosotros'),
       ),
       body: Center(
         child: Column(

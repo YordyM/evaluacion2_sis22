@@ -42,7 +42,7 @@ class SobreNosotrosScreen extends StatelessWidget {
               ),
             ),
             Text(
-              'Autor 3',
+              'Merari grande cerotina',
               style: TextStyle(
                 fontSize:
                     18, // Ajusta el tamaño del texto según tus necesidades

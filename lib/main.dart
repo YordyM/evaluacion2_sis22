@@ -22,7 +22,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'MY APP YORDY, IDALIA, RENÉ'),
+      home: const MyHomePage(title: 'MY APP YORDY, IDALIA, RENÉ 1111'),
     );
   }
 }

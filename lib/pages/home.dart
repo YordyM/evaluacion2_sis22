@@ -1,3 +1,4 @@
+import 'package:eval_sis22/pages/login_page.dart';
 import 'package:eval_sis22/pages/sobrenosotros.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart';
@@ -153,6 +154,18 @@ class _MyHomePageState extends State<MyHomePage> {
               },
               child: Text('Ir a Sobre nosotros'),
             ),
+
+ ElevatedButton(
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => LoginScreen()),
+                );
+              },
+              child: Text('Ir a login'),
+            )
+
           ],
         ),
       ),

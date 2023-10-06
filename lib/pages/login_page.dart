@@ -183,7 +183,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
         ),
       ),
     );
-  }
+  } //sdhsfdgsfdghsd
 
   void _register() async {
     final email = _emailController.text.trim();

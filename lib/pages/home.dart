@@ -3,6 +3,7 @@ import 'package:eval_sis22/pages/sobrenosotros.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:quickalert/quickalert.dart';
 
 void main() {
   runApp(const MyApp());
@@ -35,6 +36,10 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+
+  void _alertSuccess(){
+    QuickAlert.show(context: context, type: QuickAlertType.success);
+  }
   List<Map<String, dynamic>> dataFromFirestore = [];
   TextEditingController nombreController = TextEditingController();
   TextEditingController estadoController = TextEditingController();
@@ -157,12 +162,15 @@ class _MyHomePageState extends State<MyHomePage> {
 
  ElevatedButton(
               onPressed: () {
+                _alertSuccess();
                 Navigator.push(
                   context,
                   MaterialPageRoute(
+                      
                       builder: (context) => LoginScreen()),
                 );
               },
+ 
               child: Text('Ir a login'),
             )
 

@@ -61,6 +61,7 @@ class _LoginScreenState extends State<LoginScreen> {
               SizedBox(height: 32.0),
               ElevatedButton(
                 onPressed: _isSigning ? null : _signIn,
+                
                 child: _isSigning
                     ? CircularProgressIndicator(
                         color: Colors.white,

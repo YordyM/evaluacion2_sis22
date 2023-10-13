@@ -2,6 +2,7 @@ import 'dart:ffi';
 
 import 'package:eval_sis22/pages/login_page.dart';
 import 'package:eval_sis22/pages/sobrenosotros.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/foundation.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -46,7 +47,15 @@ class _MyHomePageState extends State<MyHomePage> {
      confirmBtnText: 'aceptar',
      cancelBtnText: 'cancelar',
      barrierDismissible: false,
-     cancelBtnTextStyle: TextStyle()
+     cancelBtnTextStyle: TextStyle(color: Colors.red, fontWeight: FontWeight.bold),
+     confirmBtnColor: Colors.blue,
+     onConfirmBtnTap: (){
+      FirebaseAuth.instance.signOut();
+      Navigator.pushNamed(context, "/login");
+     },
+     /* onCancelBtnTap: (){
+      Navigator.of(context).pop();
+     }, */
 
      );
   }
@@ -190,7 +199,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
             ElevatedButton(
               onPressed: () {
-                _alertSuccess();
+                _alertClose();
                 Navigator.push(
                   context,
                   MaterialPageRoute(

@@ -1,4 +1,3 @@
-import 'dart:ffi';
 
 import 'package:eval_sis22/pages/login_page.dart';
 import 'package:eval_sis22/pages/sobrenosotros.dart';
@@ -8,12 +7,9 @@ import 'package:flutter/foundation.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:quickalert/quickalert.dart';
 
-void main() {
-  runApp(const MyApp());
-}
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+class MyHome extends StatelessWidget {
+  const MyHome({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -129,15 +125,15 @@ class _MyHomePageState extends State<MyHomePage> {
               padding: EdgeInsets.all(16.0),
               child: Column(
                 children: [
-                  TextFormField(
+                  TextField(
                     controller: nombreController,
                     decoration: InputDecoration(labelText: "Nombre"),
                   ),
-                  TextFormField(
+                  TextField(
                     controller: estadoController,
                     decoration: InputDecoration(labelText: "Estado"),
                   ),
-                  TextFormField(
+                  TextField(
                     controller: precioController,
                     decoration:
                         InputDecoration(labelText: "Precio"), // Campo de precio

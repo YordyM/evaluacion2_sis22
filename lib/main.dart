@@ -1,4 +1,6 @@
 import 'package:eval_sis22/pages/home.dart';
+import 'package:eval_sis22/pages/login_page.dart';
+import 'package:eval_sis22/pages/sobrenosotros.dart';
 
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -23,7 +25,16 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'MY APP YORDY, IDALIA, RENÉ 1111'),
+      initialRoute: "/loginScreen",
+          routes: {
+      "/home": (context) => const MyHome(),
+      "/loginScreen":(context) => const LoginScreen(),
+      
+      
+      },
+
+      
+      //home: const MyHomePage(title: 'MY APP YORDY, IDALIA, RENÉ 1111'),
     );
   }
 }

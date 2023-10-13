@@ -1,6 +1,11 @@
 import 'package:flutter/material.dart';
 
-class SobreNosotrosScreen extends StatelessWidget {
+class SobreNosotrosScreen extends StatefulWidget {
+  @override
+  State<SobreNosotrosScreen> createState() => _SobreNosotrosScreenState();
+}
+
+class _SobreNosotrosScreenState extends State<SobreNosotrosScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

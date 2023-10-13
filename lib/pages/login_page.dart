@@ -3,11 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:quickalert/quickalert.dart';
 
-void main() {
-  runApp(const MaterialApp(
-    home: LoginScreen(),
-  ));
-}
+
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({Key? key}) : super(key: key);
@@ -111,7 +107,7 @@ class _LoginScreenState extends State<LoginScreen> {
       // Autenticación exitosa dirige a la pantalla inicio
       Navigator.pushReplacement(
         context,
-        MaterialPageRoute(builder: (context) => MyApp()),
+        MaterialPageRoute(builder: (context) => MyHome()),
       );
     } catch (e) {
       // Manejar errores de autenticación
@@ -227,20 +223,4 @@ class _RegisterScreenState extends State<RegisterScreen> {
   }
 }
 
-class HomePage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Mostrando db de firebase despues de logiarse'),
-      ),
-      body: Center(
-        child: Column(
-          children: [
-            Text('¡Bienvenido! Has iniciado sesión con éxito.'),
-          ],
-        ),
-      ),
-    );
-  }
-}
+

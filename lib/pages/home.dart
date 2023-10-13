@@ -1,3 +1,5 @@
+import 'dart:ffi';
+
 import 'package:eval_sis22/pages/login_page.dart';
 import 'package:eval_sis22/pages/sobrenosotros.dart';
 import 'package:flutter/material.dart';
@@ -36,6 +38,18 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
+
+  void _alertClose(){
+    QuickAlert.show(context: context,
+     type: QuickAlertType.confirm,
+     text: 'Deseas salir?',
+     confirmBtnText: 'aceptar',
+     cancelBtnText: 'cancelar',
+     barrierDismissible: false,
+     cancelBtnTextStyle: TextStyle()
+
+     );
+  }
 
   void _alertSuccess(){
     QuickAlert.show(context: context, type: QuickAlertType.success);
@@ -172,6 +186,20 @@ class _MyHomePageState extends State<MyHomePage> {
               },
  
               child: Text('Ir a login'),
+            ),
+
+            ElevatedButton(
+              onPressed: () {
+                _alertSuccess();
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      
+                      builder: (context) => LoginScreen()),
+                );
+              },
+ 
+              child: Text('Cerrar seción'),
             )
 
           ],

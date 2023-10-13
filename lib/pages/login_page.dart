@@ -1,6 +1,7 @@
 import 'package:eval_sis22/pages/home.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:quickalert/quickalert.dart';
 
 void main() {
   runApp(const MaterialApp(
@@ -16,6 +17,9 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
+  void _alertError(){
+    QuickAlert.show(context: context, type: QuickAlertType.error);}
+
   final FirebaseAuth _auth = FirebaseAuth.instance;
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
@@ -71,6 +75,7 @@ class _LoginScreenState extends State<LoginScreen> {
               SizedBox(height: 16.0),
               ElevatedButton(
                 onPressed: () {
+                  _alertError();
                   Navigator.push(
                     context,
                     MaterialPageRoute(builder: (context) => RegisterScreen()),
